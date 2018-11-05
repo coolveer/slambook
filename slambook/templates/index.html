@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Faster+One|Kirang+Haerang" rel="stylesheet">
+    
+    <title>Slam Book</title>
+</head>
+<body>
+    <div class="container dress">
+        <div class="row">
+           <div class="col-md-6"> 
+           <p class="slam">Slam Book </p>
+          
+            
+          
+           <p class="live"> {% if user.is_authenticated %}  {{user.first_name}} is logged in <br> {% endif %} Live your childhood again <br>
+           Share with your friend and make them fill your slam book. <br>
+           New here ? what are you wating for just 
+           {% if user.is_authenticated %}
+           <br>
+           <a href="{% url  'home' user.pk %}"><button type="button" class="btn btn-primary btn-md">Home</button></a> 
+           <a href="{% url  'logout' %}"><button type="button" class="btn btn-primary btn-md">logout</button></a> 
+           {% else %}
+           <a href="{% url  'signup' %}"><button type="button" class="btn btn-primary btn-md">Signup</button></a>
+           {% endif %}
+           </p>
+            </div>
+            <div class="col-md-6">
+                
+                <form action="{% url  'login' %}"  method="post">
+                {% csrf_token %}
+  <div class="form-group">
+    <label for="email">User Name :</label><br/>
+    
+    {{form.username}}
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label><br/>
+    
+    {{form.password}}
+  </div>
+  
+  <button type="submit" class="btn btn-default">Log In </button>
+</form>
+            </div>
+            
+            
+            
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+</body>
+</html>

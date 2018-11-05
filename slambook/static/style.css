@@ -1,0 +1,70 @@
+
+
+
+html{
+    height: auto;
+    width: 100%;
+    
+}
+
+@media (min-width:600px){
+    
+    
+html{
+    height: auto;
+    width: 100%;
+    
+}
+    
+}
+
+
+
+body{
+    background-image: linear-gradient(to right bottom, #445a7a, #407293, #398ca6, #3aa5b4, #4dbeba);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+div {
+   
+    margin-top: 7%;
+    color: white;
+    margin-bottom: 50px;
+    
+    
+}
+.slam{
+    color:blanchedalmond;
+    font-size: 60px;
+    font-family: 'Faster One', cursive;
+}
+
+@media (min-width:600px){
+    .slam{
+    color:blanchedalmond;
+    font-size: 80px;
+    font-family: 'Faster One', cursive;
+}
+
+    
+}
+.live{
+    font-family: 'Kirang Haerang', cursive;
+    font-size:20px;
+    
+}
+@media(min-width:600px){
+    .live{
+    font-family: 'Kirang Haerang', cursive;
+    font-size:30px;
+    
+    
+}
+
+
+
+
+
+

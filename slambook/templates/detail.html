@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Kirang+Haerang|Spicy+Rice" rel="stylesheet">
+    <title>Slam Book</title>
+</head>
+<body>
+   <div class="container">
+       <div class="row">
+          <span style="color: black"></span>
+           
+       <div style="font-size: 30px; margin-left: 60px;">  
+         {% for form in db %}
+               I look Like:<br>
+                <img src="{{form.pic.url}}" style="height: 250px; width: 250px;">
+                  <br>
+               My name is: <br>
+           <span style="font-size: 30px;" > {{ form.name}} </span> <br>
+               My sweet home: <br>
+           <span style="font-size: 30px;" >   {{ form.home}}</span><br>
+               Ring me at: <br>
+           <span style="font-size: 30px;" >   {{ form.pno}} </span><br>
+               I was born on : <br>
+           <span style="font-size: 30px;" >   {{ form.born}} </span><br>
+               I aspire to become : <br>
+           <span style="font-size: 30px;" >   {{ form.become}}</span> <br>
+               I dream about: <br>
+           <span style="font-size: 30px;" >   {{ form.dream}}</span> <br>
+               My favorite sport: <br>
+           <span style="font-size: 30px;" >   {{ form.sport}}</span> <br>
+               What i am to you: <br> 
+           <span style="font-size: 30px;" >   {{ form.relation}}</span> <br>
+               I look cool in : <br> 
+           <span style="font-size: 30px;" >   {{ form.look}} </span> <br> 
+               I like to eat : <br> 
+           <span style="font-size: 30px;" >   {{ form.eat}}</span> <br> 
+               Movies i like to watch : <br>
+           <span style="font-size: 30px;" >   {{ form.movies}}</span> <br>
+               Things i dislike in this world: <br>
+           <span style="font-size: 30px;" >   {{ form.dislike}}</span> <br>
+               I go crazy about things like : <br> 
+           <span style="font-size: 30px;" >   {{ form.crazy}}</span> <br>
+               My most wonderful moment : <br> 
+           <span style="font-size: 30px;" >   {{ form.moment}}</span> <br>
+               My favorite holiday would be with: <br>
+           <span style="font-size: 30px;" >   {{ form.holiday}}</span> <br>
+               Friendship to me is : <br>
+           <span style="font-size: 30px;" >   {{ form.friendship}}</span> <br>
+               My best moment with you : <br>    
+           <span style="font-size: 30px;" >   {{ form.withyou}}</span> <br>
+               My hobbies : <br>
+           <span style="font-size: 30px;" >   {{ form.hobbies}}</span> <br>
+               One truth nobody knows is : <br> 
+           <span style="font-size: 30px;" >   {{ form.truth}}</span> <br> 
+               About you i feel : <br> 
+           <span style="font-size: 30px;" >   {{ form.you}}</span> <br> 
+               Love i define it as : <br> 
+           <span style="font-size: 30px;" >   {{ form.love}}</span> <br> 
+               Date : <br> 
+           <span style="font-size: 30px;" >   {{ form.date}}</span> <br>
+               
+               
+              <a href="{% url 'home' user.pk %}"> <input class="btn btn-primary okk" type="submit" value="Back"></a>
+              
+              {% endfor %}
+            
+           
+           
+           
+           
+           
+           
+           
+       </div>
+   </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+<script src="//platform-api.sharethis.com/js/sharethis.js#property=5bdb5265b202f90011c748c6&product=inline-share-buttons"></script>
+</body>
+</html>

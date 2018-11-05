@@ -1,0 +1,44 @@
+html{
+    height: auto;
+    width:100%
+}
+body{
+     background-image: linear-gradient(to right bottom, #445a7a, #407293, #398ca6, #3aa5b4, #4dbeba);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+span{
+    color: aqua;
+    font-family: 'Spicy Rice', cursive;
+    font-size:40px;
+    
+}
+
+@media (max-width:600px){
+ span{
+    color: aqua;
+    font-family: 'Spicy Rice', cursive;
+    font-size:20px;
+    
+}
+}
+
+div{
+    
+    color: white;
+    font-family: 'Kirang Haerang', cursive;
+}
+.user{
+    color: chartreuse;
+}
+.okk{
+    margin-bottom: 20px;
+}
+
+@media (max-width:600px){
+    form{
+    margin-left: 20px;
+        margin-right: 10px;
+}
+}

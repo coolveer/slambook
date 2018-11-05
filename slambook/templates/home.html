@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'style3.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Kirang+Haerang|Spicy+Rice" rel="stylesheet">
+    <title>Slam Book</title>
+</head>
+<body>
+   <nav class="navbar navbar-expand-sm bg-dark navbar-dark"> <span> Welcome {{ firstn}}         </span>
+    <a href="{% url 'slambook' user.pk user.first_name %}"> <button type="button" class="btn btn-primary slambook">Share Slambbok To fill</button> </a> <a href="{% url  'logout' %}"> <button type="button" class="btn btn-danger">Logout</button></a> </nav>
+    
+    
+    
+   
+   <!-- from here first card starts -->
+    {% for i in db %}
+    
+    <br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+                <div class="card" style="width:400px">
+  <img class="card-img-top" src="{{i.pic.url}}" alt="Card image">
+  <div class="card-body">
+    <h4 class="card-title"> {{i.name}} </h4>
+    <p class="card-text">About you i feel :  {{i.you}} </p>
+    <a href="{% url 'detail' i.pk %}" class="btn btn-primary">Detail</a>
+  </div>
+</div>
+            
+        </div>
+        <div class="col-md-4"></div>
+        
+        
+    </div>
+    
+</div> <br> <br>
+
+   {% endfor %}
+    <!-- here first card ends and second starts -->
+    <!-- from here exception starts where there is not any entry -->
+ 
+ <br> <br> <br> 
+    
+    <div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+                <div class="card" style="width:400px">
+  
+  <div class="card-body">
+    <h4 class="card-title">No one new had filled your slambook</h4>
+    <p class="card-text">Go and share your slambook</p>
+    <a href="{% url 'slambook' user.pk user.first_name %}" class="btn btn-primary">share</a>
+  </div>
+</div>
+            
+        </div>
+        <div class="col-md-4"></div>
+        
+        
+    </div>
+    
+</div>
+  
+    
+    
+    <!-- from here exception ends -->
+    
+    
+   <br> <br> <br> 
+    
+    <div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+               
+            
+        </div>
+        <div class="col-md-4"></div>
+        
+        
+    </div>
+    
+</div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+</body>
+</html>

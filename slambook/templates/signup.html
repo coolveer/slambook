@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'style4.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+    <title>Slam Book</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <p>Let's create your slam book just sign up and you are ready to go ........</p> <br> <br> 
+                <form action="{% url 'signup_pro' %}" method="post">
+                   {% csrf_token %}
+                    Choose a username : <br> 
+                     {{form.username}} <br> 
+                     First Name : <br> 
+                     {{form.fname}} <br> 
+                    What is you Email : <br> 
+                    {{form.email}} <br>
+                    Choose a Password : <br> 
+                    {{form.password1}}
+                   <span> *password must contain atleast one uppercase ,one lowercase ,one number,one special charector</span> <br> <br>
+                   Re-enter your password:
+                   {{form.password2}} <br>
+                   <input class="btn btn-primary okk" type="submit" value="Done!">
+                   
+                </form>
+                
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+</body>
+</html>

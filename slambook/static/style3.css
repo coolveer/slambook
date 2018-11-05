@@ -1,0 +1,30 @@
+html{
+    height:auto;
+    width:100%
+}
+body{
+     background-image: linear-gradient(to right bottom, #445a7a, #407293, #398ca6, #3aa5b4, #4dbeba);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+span{
+    font-size: 20px;
+    color: aqua;
+    font-family: 'Spicy Rice', cursive;
+}
+
+.try{
+    margin-top: 200px;
+}
+  
+.slambook{
+    align-content: center;
+}
+
+@media (min-width:600px){
+    .slambook{
+    align-content: center;
+}
+    
+}

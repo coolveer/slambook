@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Kirang+Haerang|Spicy+Rice" rel="stylesheet">
+    <title>Slam Book</title>
+</head>
+<body>
+   <div class="container">
+       <div class="row">
+           
+       <div>    <p><span>Fill the the slambook for your friend <span class="user"> {{fname}}</span></span></p> 
+          <br>
+          {% if user.is_authenticated %}
+          <div><a href="{% url 'home' user.pk %}"> <input class="btn btn-primary okk" type="submit" value="Back"></a></div>
+          <div><span class="user">Share this page so that your friend can fill it </span></div>
+          <div class="sharethis-inline-share-buttons"></div>
+          {% endif %}
+           
+           <form action="{% url 'process' pk %}" method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+               I look Like:<br>
+                 {{form.pic}} <br>
+                 **try to upload image under 500kb otherwise it will take longer time to upload <br>
+               My name is: <br>
+                {{ form.name}} <br>
+               My sweet home: <br>
+               {{ form.home}}<br>
+               Ring me at: <br>
+               {{ form.pno}} <br>
+               I was born on : <br>
+               {{ form.born}} <br>
+               I aspire to become : <br>
+               {{ form.become}} <br>
+               I dream about: <br>
+               {{ form.dream}} <br>
+               My favorite sport: <br>
+               {{ form.sport}} <br>
+               What i am to you: <br> 
+               {{ form.relation}} <br>
+               I look cool in : <br> 
+               {{ form.look}} <br> 
+               I like to eat : <br> 
+               {{ form.eat}} <br> 
+               Movies i like to watch : <br>
+               {{ form.movies}} <br>
+               Things i dislike in this world: <br>
+               {{ form.dislike}} <br>
+               I go crazy about things like : <br> 
+               {{ form.crazy}} <br>
+               My most wonderful moment : <br> 
+               {{ form.moment}} <br>
+               My favorite holiday would be with: <br>
+               {{ form.holiday}} <br>
+               Friendship to me is : <br>
+               {{ form.friendship}} <br>
+               My best moment with you : <br>    
+               {{ form.withyou}} <br>
+               My hobbies : <br>
+               {{ form.hobbies}} <br>
+               One truth nobody knows is : <br> 
+               {{ form.truth}} <br> 
+               About you i feel : <br> 
+               {{ form.you}} <br> 
+               Love i define it as : <br> 
+               {{ form.love}} <br> 
+               Date : <br> 
+               {{ form.date}} <br>
+               
+               
+               <input class="btn btn-primary okk" type="submit" value="Done!">
+               
+               
+               
+               
+               
+               
+               
+                
+               
+               
+           </form>
+           
+           
+           
+           
+           
+           
+           
+       </div>
+   </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+<script src="//platform-api.sharethis.com/js/sharethis.js#property=5bdb5265b202f90011c748c6&product=inline-share-buttons"></script>
+</body>
+</html>
