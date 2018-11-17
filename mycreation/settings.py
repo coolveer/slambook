@@ -130,5 +130,5 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_SSL = True
 EMAIL_USE_TLS = False
 EMAIL_PORT = 465
-EMAIL_HOST_USER = 'coolveer.singh110@gmail.com'
-EMAIL_HOST_PASSWORD = 'vsa@veer1'
+EMAIL_HOST_USER = 'your@email.com'
+EMAIL_HOST_PASSWORD = 'your@password'
